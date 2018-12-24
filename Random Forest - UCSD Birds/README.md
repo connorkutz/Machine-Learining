@@ -17,9 +17,11 @@ There have been many projects which aim to classify birds, for example Vidaña-V
 ### IV. Metrics
 For this classifier, accuracy is measured in termsi of "estimated out-of-bag" error. This means that for each bootstrap sample taken from the data, the mean prediction error is measured in each tree made not using the given bootstrap sample. This can be written as:
 
+[![N|Formula](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/formula.png)]
+
 Where 𝑡 is a terminal node, and 𝑞 ∗ (𝑡) = 𝑃(𝑋 ∈ 𝑡) is the chance that a bird is gets into that node of the tree. 
 
-[![N|#Name](#imageurl)](#linkurl)
+[![N|Formula](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/formula.png)]
 
 [^1]: https://pdfs.semanticscholar.org/c069/629a51f6c1c301eb20ed77bc6b586c24ce32.pdf
 [^2]: https://www.mdpi.com/2306-5729/2/2/18/htm
