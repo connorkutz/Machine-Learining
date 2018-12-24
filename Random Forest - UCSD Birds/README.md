@@ -43,6 +43,7 @@ For example, one such problematic label I noticed was “has Spatulate shaped be
 ![N|Spatulate](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/Spatulate.jpg)
 
 *True Spatulate*
+
 ![N|Black Footed Albatross](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/Albatross.jpg)
 
 *Black Footed Albatross*
