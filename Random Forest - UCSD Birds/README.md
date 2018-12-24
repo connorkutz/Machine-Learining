@@ -33,6 +33,7 @@ The original runtime to create a model using the entire dataset was over one hou
 The Caltech Birds dataset includes ~11,000 images of birds, each image also comes with 312 labeled binary attributes one-hot encoded. Only the binary features were used to classify, not the images. Labels included features such as “has yellow throat,”
 
 ![N|Yellow Breasted Chat](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/Yellow_Breasted_Chat_0014_21970.jpg)
+
 *Yellow Breasted Chat*
 
 and “has black belly feathers.” In this dataset, images were labeled by the researchers, but each of the 312 binary attributes included with each image was labeled by Mechanical Turkers. Because of this, there were quite a few discrepancies in the data that caused issues classifying.
@@ -40,8 +41,10 @@ and “has black belly feathers.” In this dataset, images were labeled by the 
 For example, one such problematic label I noticed was “has Spatulate shaped beak.” About half of Black Footed Albatross were labeled as having a spatulate shaped beak, though it’s incorrect. 
 
 ![N|Spatulate](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/Spatulate.jpg)
+
 *True Spatulate*
 ![N|Black Footed Albatross](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/Albatross.jpg)
+
 *Black Footed Albatross*
 
 Because of this mislabeling of attributes, Black Footed Albatross were almost never classified correctly. The best way I was able to solve issues like this was to remove this feature from the model completely. As another example, Brewer Blackbirds were classified equally often with “has black eyes,” and “has white eyes,” which caused a similar problem.
