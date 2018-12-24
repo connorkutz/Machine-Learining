@@ -19,7 +19,46 @@ For this classifier, accuracy is measured in termsi of "estimated out-of-bag" er
 
 ![N|Formula](https://github.com/connorkutz/Machine-Learining/raw/master/Random%20Forest%20-%20UCSD%20Birds/formula.png)
 
-Where 𝑡 is a terminal node, and 𝑞 ∗ (𝑡) = 𝑃(𝑋 ∈ 𝑡) is the chance that a bird is gets into that node of the tree. 
+Where 𝑡 is a terminal node, and 𝑞 ∗ *(𝑡)* = 𝑃 *(𝑋 ∈ 𝑡)* is the chance that a bird is gets into that node of the tree. 
+
+We measure using out-of-bag error because we want to know how the trees and forest perform on the data without the observations from the most recent sample. Not only does this allow us to measure accuracy increase with each additional tree, but it gives a more accurate error percentage and negates the need for a separate validation data split. The only downside of this method is that it can underestimate the actual performance of the random forest.
+
+Feature importance was calculated at the end of each forest training. The method used was to find the sum of risk changes due to splits on each predictor. After that, the sum was divided by the number of branch nodes on each tree. Using this information, unused predictors could be removed from the data set to improve running time. Later, less important features could also be removed, improving overall accuracy. 
+
+![N|#Title](#url)
+
+The original runtime to create a model using the entire dataset was over one hour. Since this project was on a deadline, I opted to shrink the dataset by ~90 percent, classifying 18 species of birds with about 30,000 attributes total. This was done to allow time to perform the necessary optimization and testing for the project. 
+
+### V. Dataset
+The Caltech Birds dataset includes ~11,000 images of birds, each image also comes with 312 labeled binary attributes one-hot encoded. Only the binary features were used to classify, not the images. Labels included features such as “has yellow throat,”
+
+![N|#Title](#url)
+*Yellow Breasted Chat*
+
+and “has black belly feathers.” In this dataset, images were labeled by the researchers, but each of the 312 binary attributes included with each image was labeled by Mechanical Turkers. Because of this, there were quite a few discrepancies in the data that caused issues classifying.
+
+For example, one such problematic label I noticed was “has Spatulate shaped beak.” About half of Black Footed Albatross were labeled as having a spatulate shaped beak, though it’s incorrect. 
+
+![N|#Title](#url)
+*True Spatulate*
+![N|#Title](#url)
+*Black Footed Albatross*
+
+Because of this mislabeling of attributes, Black Footed Albatross were almost never classified correctly. The best way I was able to solve issues like this was to remove this feature from the model completely. As another example, Brewer Blackbirds were classified equally often with “has black eyes,” and “has white eyes,” which caused a similar problem.
+
+### VI. Methods
+Prior to loading the data into Matlab for processing, a large amount of preprocessing was done in Microsoft Excel. Here, data was organized and resized to work on my personal computer. After importing the data to Matlab, it was further separated into class labels and attributes then used in the Random Forest model.
+
+The model was trained on bagged training sets from the data. Bagged sets are taken from the dataset and are the same size as the original dataset, the difference is that examples are chosen with replacement. For large datasets, the data can be estimated to be 1-1/e = 63.2% unique examples, per bootstrap sample. Bagging is used because it trains on a more realistic estimation of testing data thereby reducing variance and overfitting. 
+
+Before parameter refinement, the model was already fairly accurate at ~30% error. After performing hyperparameter optimization, classification accuracy converged around 75%
+
+![N|#Title](#url)
+
+### VII. Conclusion
+It is well known that Random Forest is a very effective classifier and can be proven by Condorcet’s Jury Theorem, but the goal of my project was to analyze the effect of good data and parameters on the results. Random Forest ended up being very insensitive to hyperparameters and only improved classification accuracy by 5% after optimization.
+
+The data had a larger effect on the results of the classifier than anything else. This project ended up being a tool to investigate just how much having good clean data can produce a very strong classifier. 
 
 [^1]: https://pdfs.semanticscholar.org/c069/629a51f6c1c301eb20ed77bc6b586c24ce32.pdf
 [^2]: https://www.mdpi.com/2306-5729/2/2/18/htm
