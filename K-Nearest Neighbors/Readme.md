@@ -6,11 +6,11 @@ The MNIST dataset is a large grouping of handwritten numbers created to demonstr
 
 There are approximately 60,000 images of digits in this dataset, so split it up 80 percent was used to train the model, 10 percent was used to validate date during testing and the last 10 percent was used for labeling.
 
-![N|Numbers]()
+![N|Numbers](https://github.com/connorkutz/Machine-Learining/raw/master/K-Nearest%20Neighbors/numbers.png)
 
 The Pima Indian Diabetes study is another historic dataset because this society has the highest rate of diabetes in the world. Studying this is useful because they are a homogeneous population meaning most other aspects of their lives and DNA are the same. This allows us to pinpoint specific variables like BMI and skin thickness to see their correlation with diabetes. 
 
-![N|BMI vs Blood Pressure]()
+![N|BMI vs Blood Pressure](https://github.com/connorkutz/Machine-Learining/raw/master/K-Nearest%20Neighbors/Example%20Correlation.jpg)
 
 ### Algorithm
 
@@ -20,17 +20,19 @@ K-Nearest Neighbors is one of the simplest machine learning algorithms. It creat
 
 To measure accuracy, the number of correct predictions was divided by the total number of predictions to give a percentage. For both data sets, the most accurate value for k was tested for by remodeling and testing on each value. In the case of the Pima Indian Diabetes set, the most accurate K number was 36 with Euclidian distance.
 
-![N|accuracy]()
+![N|accuracy](https://github.com/connorkutz/Machine-Learining/raw/master/K-Nearest%20Neighbors/Accuracy%20vs.%20K.jpg)
 
 In the case of the Digit Identification, a K value of 3 was most successful. 
 
-![N|K]()
+![N|K](https://github.com/connorkutz/Machine-Learining/raw/master/K-Nearest%20Neighbors/accuracy%20vs%20k.jpg)
 
 Overall, the Pima Indian classifier was 76% accurate with very few false negatives (which is important when classifying for peoples’ health. 
 
-![N|Confusion Matrix]()
+![N|Confusion Matrix](https://github.com/connorkutz/Machine-Learining/raw/master/K-Nearest%20Neighbors/Confusion%20Matrix.jpg)
 
 The Digit classifier was extremely accurate after ~30,000 data points to model on and the overall accuracy was 97%. 
+
+![N|Confusion Matrix](https://github.com/connorkutz/Machine-Learining/raw/master/K-Nearest%20Neighbors/big%20Confusion%20Matrix.jpg)
 
 ### Runtime
 
