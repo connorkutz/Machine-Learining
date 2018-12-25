@@ -67,6 +67,6 @@ The data had a larger effect on the results of the classifier than anything else
 
 ___
 
-  <sup>1</sup>  https://pdfs.semanticscholar.org/c069/629a51f6c1c301eb20ed77bc6b586c24ce32.pdf
-  <sup>2</sup>  https://www.mdpi.com/2306-5729/2/2/18/htm
-  <sup>3</sup>  https://pdfs.semanticscholar.org/c069/629a51f6c1c301eb20ed77bc6b586c24ce32.pdf
+<sup>1</sup>  https://pdfs.semanticscholar.org/c069/629a51f6c1c301eb20ed77bc6b586c24ce32.pdf
+<sup>2</sup>  https://www.mdpi.com/2306-5729/2/2/18/htm
+<sup>3</sup>  https://pdfs.semanticscholar.org/c069/629a51f6c1c301eb20ed77bc6b586c24ce32.pdf
